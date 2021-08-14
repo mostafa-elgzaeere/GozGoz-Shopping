@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= {% static 'css/style.css' %} >
+        <link rel="stylesheet" href= {% static 'css/bootstrap.min.css' %} >
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> 
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+
+{% include 'nav.html' %}
+
+{% block content %}
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+<div class="footer">
+    <div class="inner-footer">
+  
+  <!--  for company name and description -->
+      <div class="footer-items">
+        <h1>GozGoz <span>Shop</span></h1>
+      </div>
+  
+  
+  <!--  for some other links -->
+      <div class="footer-items">
+        <h3>Recipes</h3>
+        <div class="border1"></div>  <!--for the underline -->
+          <ul>
+            <a href="#"><li>Indian</li></a>
+            <a href="#"><li>Chinese</li></a>
+            <a href="#"><li>Mexican</li></a>
+            <a href="#"><li>Italian</li></a>
+          </ul>
+      </div>
+  
+  <!--  for contact us info -->
+      <div class="footer-items">
+        <h3>Contact us</h3>
+        <div class="border1"></div>
+          <ul>
+            <li><i class="fa fa-phone" aria-hidden="true"></i>01023734243</li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i>mostafa.zamlkawe@yahoo.com</li>
+          </ul> 
+        
+  <!--   for social links -->
+          <div class="social-media">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google-plus-square"></i></a>
+          </div> 
+      </div>
+    </div>
+
+<script src="{% static '../static/js/jquery.min.js' %}"></script>
+<script src="{% static '../static/js/bootstrap.min.js' %}"></script>
+<script src="{% static '../static/js/script.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}GozGoz / {{product.categorey}} / {{product.name}}{% endblock title %}{{product.name}}
+
+{% include 'nav.html' %}
+
+{% block content %}
+
+    <div class="container bg-light mt-2">
+        <div class="img_product"><img src= "{{ product.image.url }}" width="100%" alt=""></div>
+        <div class="detils">
+            <h2>{{product.name}}</h2>
+            <br>
+            <br>
+            <h3>{{product.description}}</h3>
+            <br>
+            <br>
+            <h3>Show All <a  href={% url 'slug_categorey' product.categorey.slug %} style="color: #E09800;text-decoration: none;" >{{product.categorey}}</a>  Products</h3>
+            <br>
+            <br>
+            <h4>{{product.price}}$</h4>
+            <br>
+            <br>
+            
+            <form action="{% url 'add_in_cart' product.id %}" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <input type="submit" value="Add To Cart" id="product_detil_add" class="btn btn-warning text-dark" >
+            </form>
+
+        </div>
+      
+    </div>
+
+
+
+
+{% endblock content %}

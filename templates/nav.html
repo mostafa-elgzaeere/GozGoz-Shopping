@@ -1,0 +1,9 @@
+    <nav>
+        <div class="logoo"> <a href={% url 'home' %}>GozGoz<span>Shop</span></a>  </div>
+        <ul>
+           <a href={% url 'cart_detils' %}><i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i></a>
+            
+           <li>{{cart|length}}</li>
+        </ul>
+    </nav>
+

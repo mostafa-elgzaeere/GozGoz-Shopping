@@ -1,0 +1,3 @@
+start rappitmq sever
+pip install celery
+celercelery -A src worker -l info
